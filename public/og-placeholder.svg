@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">The diary placeholder Open Graph image</title>
+  <desc id="desc">Placeholder image for Harry Haz Hubble personal website.</desc>
+  <rect width="1200" height="630" fill="#101014"/>
+  <rect x="118" y="86" width="964" height="458" rx="18" fill="#eee5d2"/>
+  <path d="M184 176h832M184 250h832M184 324h832M184 398h832" stroke="#24201d" stroke-opacity=".16" stroke-width="3"/>
+  <text x="184" y="328" fill="#24201d" font-family="Georgia, serif" font-size="94">the diary</text>
+  <text x="188" y="388" fill="#3e6860" font-family="Arial, sans-serif" font-size="30">[PLACEHOLDER COPY]</text>
+</svg>

@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Inter, Arial, Helvetica, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --color-night: #101014;
+  --color-ink: #24201d;
+  --color-paper: #eee5d2;
+  --color-paper-soft: #f7f1e3;
+  --color-ember: #b55a3c;
+  --color-verdigris: #3e6860;
+  --color-brass: #caa96b;
+}
+
+:root {
+  background: #101014;
+  color: #f7f1e3;
+  color-scheme: dark;
+  --site-shell: min(1120px, calc(100% - 32px));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(16, 16, 20, 0.94), rgba(16, 16, 20, 0.98)),
+    radial-gradient(54rem 30rem at 50% -12rem, rgba(181, 90, 60, 0.26), transparent 70%),
+    radial-gradient(38rem 24rem at 92% 18%, rgba(62, 104, 96, 0.18), transparent 72%),
+    #101014;
+  color: #f7f1e3;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+::selection {
+  background: rgba(202, 169, 107, 0.36);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+a:focus-visible,
+button:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #caa96b;
+  outline-offset: 4px;
+}
+
+.site-shell {
+  width: var(--site-shell);
+  margin-inline: auto;
+}
+
+.paper-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(202, 169, 107, 0.2);
+  background:
+    linear-gradient(135deg, rgba(247, 241, 227, 0.98), rgba(238, 229, 210, 0.94)),
+    #eee5d2;
+  color: #24201d;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+}
+
+.paper-panel::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(36, 32, 29, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(36, 32, 29, 0.025) 1px, transparent 1px);
+  background-size: 100% 2.1rem, 2.1rem 100%;
+  content: "";
+  mix-blend-mode: multiply;
+}
+
+.ink-rule {
+  border-color: rgba(36, 32, 29, 0.14);
+}
+
+.soft-link {
+  color: rgba(247, 241, 227, 0.76);
+  transition: color 160ms ease;
+}
+
+.soft-link:hover {
+  color: #f7f1e3;
+}
+
+.nav-link {
+  color: rgba(247, 241, 227, 0.68);
+  font-size: 0.86rem;
+  transition: color 160ms ease;
+}
+
+.nav-link:hover {
+  color: #f7f1e3;
+}
+
+.page-kicker {
+  color: #caa96b;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
