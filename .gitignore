@@ -1,0 +1,13 @@
+.DS_Store
+.env
+.env*.local
+.next/
+.vercel/output/
+.wrangler/
+node_modules/
+out/
+coverage/
+*.tsbuildinfo
+.vercel/
+.pally-worktree*
+.context/
