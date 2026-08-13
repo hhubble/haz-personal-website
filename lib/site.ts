@@ -12,9 +12,9 @@ export const siteMetadata = {
 };
 
 export const navigation = [
-  { href: "/entries", label: "entries" },
-  { href: "/work", label: "work" },
-  { href: "/about", label: "about" },
+  { href: "/entries", label: "earlier entries" },
+  { href: "/work", label: "the work" },
+  { href: "/about", label: "who is haz?" },
 ];
 
 export const socials = [

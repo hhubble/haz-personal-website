@@ -11,7 +11,7 @@ Personal website scaffold for Harry "Haz" Hubble.
 - `lib/diary.ts` contains the diary request/response contract and placeholder
   response builder.
 - `app/entries` and `app/entries/[slug]` render diary-style biography entries.
-- `app/work` renders a conventional timeline/resume-style backpage.
+- `app/work` renders a timeline as another handwritten diary page.
 - `app/about` renders the canonical structured-data bio placeholder.
 - `app/sitemap.ts` and `app/robots.ts` provide lightweight SEO crawl routes.
 - `components/` contains shared interface components.
@@ -42,10 +42,13 @@ Important replacement points:
 
 ## Design Direction
 
-The design layer follows the "diary" concept: sparse, text-forward, dark page
-chrome, parchment panels, serif display type, and quiet brass, ember, and
-verdigris accents. It should feel modern and referential, not literal or
-trademarked.
+The site is one full-viewport, tea-stained notebook. Layered CSS gradients,
+paper grain, ruled lines, and handwritten ink make each route feel like a page
+from the same found object.
+
+Visitors write directly onto the paper. Their words sink into the page, and
+the diary answer bleeds back word by word. Marginal notes and a dog-eared
+corner turn between pages without conventional site chrome.
 
 ## Development
 
@@ -62,6 +65,7 @@ Local verification:
 npm run lint
 npm run typecheck
 npm run build
+npm run pages:build
 ```
 
 Cloudflare Pages preview deploy:

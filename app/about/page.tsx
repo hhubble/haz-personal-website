@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CanonicalBioBlock } from "@/components/canonical-bio-block";
+import { TurnLink } from "@/components/page-turn";
 
 export const metadata: Metadata = {
   title: "About",
@@ -12,14 +13,23 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <section className="site-shell py-16 sm:py-24">
-      <div className="max-w-3xl">
-        <p className="page-kicker">canonical bio</p>
-        <h1 className="mt-4 font-serif text-5xl leading-tight text-paper-soft sm:text-6xl">
-          About Haz
-        </h1>
+    <section className="notebook-page">
+      <div className="notebook-inner">
+        <nav className="margin-nav" aria-label="Diary pages">
+          <TurnLink href="/" className="marginalia">
+            back to today
+          </TurnLink>
+          <TurnLink href="/entries" className="marginalia">
+            earlier entries
+          </TurnLink>
+          <TurnLink href="/work" className="marginalia">
+            the work
+          </TurnLink>
+        </nav>
+
+        <h1 className="page-title">who is haz?</h1>
+        <CanonicalBioBlock />
       </div>
-      <CanonicalBioBlock className="mt-10" />
     </section>
   );
 }

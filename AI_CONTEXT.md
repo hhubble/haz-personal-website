@@ -57,6 +57,20 @@ contract for all visual work.
 - Keep semantics: one `h1` per page, labeled form controls, `aria-live` for
   diary replies, visible ink-colored focus styles.
 
+### CSS Gotchas
+
+- Never put a color (or a `var()` that resolves to a color) in a
+  `background-image` layer list. A color is not an `<image>`, and with
+  `var()` the failure is invalid-at-computed-value time: the browser
+  silently drops the entire `background-image` stack, so every stain and
+  vignette disappears with no console error. Set the base color with
+  `background-color` and verify with
+  `getComputedStyle(document.body).backgroundImage` in the browser, not by
+  reading the stylesheet.
+- Do not run `npm run build` or `npm run pages:build` while `next dev` is
+  serving. They share `.next`, and the dev server keeps serving stale CSS
+  afterward. Stop the dev server first, or restart it and delete `.next`.
+
 ## Architecture
 
 - Next.js App Router with TypeScript and Tailwind CSS.
