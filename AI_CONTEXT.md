@@ -185,9 +185,17 @@ codex exec --ignore-user-config -m gpt-5.6-sol \
 ## Release Workflow
 
 - Do not push, deploy, or open a PR unless the user asks for it.
-- Base PRs on `main`. The sandbox has no direct GitHub auth for API tools;
-  push and open PRs through the local git CLI.
+- Base PRs on `main`. Push and open PRs through the local git and `gh`
+  CLIs, which are authenticated on this machine.
 - Before a push, run the four checks in Development Workflow.
+- `.github/workflows/deploy.yml` builds with `npm run pages:build` and
+  deploys `.vercel/output/static` to the Cloudflare Pages project
+  `haz-personal-website` with Wrangler on every push to `main` (plus
+  manual `workflow_dispatch`). It needs the `CLOUDFLARE_API_TOKEN` and
+  `CLOUDFLARE_ACCOUNT_ID` GitHub repo secrets. The Pages project has no
+  native Cloudflare Git integration (`source: null`); this workflow is
+  the only automatic deploy path. `npm run pages:deploy` remains for
+  manual deploys and pulls credentials from AWS Secrets Manager.
 
 ## Agent Handoff
 
